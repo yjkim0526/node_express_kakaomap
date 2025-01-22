@@ -14,5 +14,8 @@ app.get("/", (req, res) => {
 });
 
 app.listen(app.get("port"), () => {
-  console.log(`서버 실행 : http://localhost:${app.get("port")}`);
+  //console.log(`서버 실행 : http://localhost:${app.get("port")}`);
+  console.log(`Example app listening on port ${app.get("port")}`);
 });
+
+module.exports = app;

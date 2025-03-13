@@ -6,6 +6,7 @@
 
     <title>자전거 교통사고 다발지역 정보</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
 
     <link rel="stylesheet" href="main.css" />
   </head>
@@ -19,23 +20,19 @@
           <label id="siDo" class="p-2" for="radius" value="27"
             >대구광역시</label
           >
-          <select
-            id="gugun"
-            class="inline-flex w-32 justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-            aria-label="Default select example"
-          >
-            <option selected>구군선택</option>
-            <option class="block px-4 py-2 text-sm text-gray-700" value="200">
+          <select id="gugun" class="border border-slate-300 rounded px-4 " aria-label="Default select example">
+            <option class="block px-4 py-2 text-sm text-gray-700" value="140" selected>
+              동구
+						<option class="block px-4 py-2 text-sm text-gray-700" value="200">
               남구
             </option>
             <option class="block px-4 py-2 text-sm text-gray-700" value="290">
               달서구
             </option>
-            <option class="block px-4 py-2 text-sm text-gray-700" value="710">
+            <option class="block px-4 py-2 text-sm text-gray-700" value="710" >
               달성군
             </option>
-            <option class="block px-4 py-2 text-sm text-gray-700" value="140">
-              동구
+
             </option>
             <option class="block px-4 py-2 text-sm text-gray-700" value="230">
               북구
@@ -53,12 +50,12 @@
               군위군
             </option>
           </select>
-          <select
-            id="year"
-            class="inline-flex w-28 justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-            aria-label="Default select example"
-          >
-            <option value="" selected>년도선택</option>
+          <select id="year" class="border border-slate-300 rounded px-4" aria-label="Default select example">
+            <option value="2023" selected>2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
           </select>
           <input
             type="button"

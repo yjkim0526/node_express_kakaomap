@@ -45,15 +45,15 @@ function selectedControl() {
   guGunVal = guGun.options[guGun.selectedIndex].value;
   console.log("guGunVal : " + guGunVal);
 
-  if (guGunVal === "구군선택" || guGunVal === "") {
-    alert("구군을 선택하세요.");
-    return;
-  }
+  // if (guGunVal === "구군선택" || guGunVal === "") {
+  //   alert("구군을 선택하세요.");
+  //   return;
+  // }
 
-  if (yearVal === "년도선택" || yearVal === "") {
-    alert("년도를 선택하세요.");
-    return;
-  }
+  // if (yearVal === "년도선택" || yearVal === "") {
+  //   alert("년도를 선택하세요.");
+  //   return;
+  // }
 
   //getKakaoMap(guGunVal, yearVal);
 
@@ -64,7 +64,7 @@ function selectedControl() {
 async function getData(guGunVal, yearVal) {
   console.log("getData guGunVal : " + guGunVal + " yearVal :" + yearVal);
   const fetch_url = `https://apis.data.go.kr/B552061/frequentzoneBicycle/getRestFrequentzoneBicycle?ServiceKey=${API_KEY}&searchYearCd=${yearVal}&siDo=27&guGun=${guGunVal}&type=json&numOfRows=10&pageNo=1`;
-
+  console.log("getData fetch_url : ", fetch_url);
   const response = await fetch(fetch_url);
   const data = await response.json();
   //console.log("data : ", data);

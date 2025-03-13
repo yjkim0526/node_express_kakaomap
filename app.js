@@ -17,7 +17,7 @@ app.get("/api/kakaomap", async (req, res) => {
   const guGunVal = req.query.guGunVal;
 
   const apiUrl = `https://apis.data.go.kr/B552061/frequentzoneBicycle/getRestFrequentzoneBicycle?ServiceKey=${API_KEY}&searchYearCd=${yearVal}&siDo=27&guGun=${guGunVal}&type=json&numOfRows=10&pageNo=1`;
-
+  console.log(`/api/kakaomap ... | ${apiUrl}`);
   try {
     const response = await axios.get(apiUrl);
     console.log("axios.get ... : " + JSON.stringify(response));

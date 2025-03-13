@@ -1,7 +1,5 @@
 const API_KEY =
   "U7CaYX4DVeuDthe45YsPPDKvZe9%2FsOIvuP3SQ3MFtUXl%2FZl%2F8QzMlMoVuLajSuf0M6OWNdmxMlGU9ZDOajjo3Q%3D%3D";
-// console.log(process.env.API_KEY);
-// const API_KEY = process.env.API_KEY;
 const frmSel = document.querySelector("#frm");
 const currentYear = new Date().getFullYear();
 console.log(">> currentYear : ", currentYear);
@@ -56,6 +54,8 @@ function selectedControl() {
     alert("년도를 선택하세요.");
     return;
   }
+
+  //getKakaoMap(guGunVal, yearVal);
 
   // 데이타 fetch
   getData(guGunVal, yearVal);

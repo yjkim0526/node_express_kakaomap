@@ -7,7 +7,7 @@ console.log(">> currentYear : ", currentYear);
 var mapContainer = document.getElementById("map"), // 지도를 표시할 div
   mapOption = {
     center: new kakao.maps.LatLng(35.884066137238, 128.660705628812), // 지도의 중심좌표
-    level: 3, // 지도의 확대 레벨
+    level: 5, // 지도의 확대 레벨
   };
 
 // 지도를 생성한다.
@@ -50,12 +50,12 @@ function selectedControl() {
   //   return;
   // }
 
-  // if (yearVal === "년도선택" || yearVal === "") {
-  //   alert("년도를 선택하세요.");
-  //   return;
-  // }
+  if (yearVal === "년도선택" || yearVal === "") {
+    alert("년도를 선택하세요.");
+    return;
+  }
 
-  //getKakaoMap(guGunVal, yearVal);
+  // getKakaoMap(guGunVal, yearVal);
 
   // 데이타 fetch
   getData(guGunVal, yearVal);
